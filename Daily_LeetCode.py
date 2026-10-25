@@ -38,4 +38,10 @@ def twoSum(nums, target):
 
 # ================================================================================================================================================
 
+# Day 3 - 25 oct 2026 ( [Easy] 26. Remove Duplicates from Sorted Array) ===========================================================================================
 
+
+class Solution:
+    def removeDuplicates(self, nums: list[int]) -> int:
+        nums[:] = list(dict.fromkeys(nums))
+        return len(nums)
