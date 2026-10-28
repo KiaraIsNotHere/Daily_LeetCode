@@ -45,3 +45,29 @@ class Solution:
     def removeDuplicates(self, nums: list[int]) -> int:
         nums[:] = list(dict.fromkeys(nums))
         return len(nums)
+
+# Day 4 - 28 oct 2026 ( 14. Longest Common Prefix )
+class Solution:
+    def longestCommonPrefix(self, strs: list[str]) -> str:
+        if not strs:
+            return ""
+
+        minLength = min(len(x) for x in strs)
+
+        common = ""
+
+        for i in range(minLength):
+            current = strs[0][i]
+
+            if all(x[i] == current for x in strs):
+                common += current
+            else:
+                break
+
+        return common
+
+   
+
+
+
+
